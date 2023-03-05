@@ -53,32 +53,8 @@ public abstract class SearchBySurnameDialog extends JDialog implements ActionLis
 
         pack();
         setLocationRelativeTo(parent);
-//		JPanel searchPanel = new JPanel(new GridLayout(3,1));
-//		JPanel textPanel = new JPanel();
-//		JPanel buttonPanel = new JPanel();
-//		JLabel searchLabel;
-//
-//		searchPanel.add(new JLabel("Search by Surname"));
-//	
-//		textPanel.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
-//		textPanel.add(searchLabel = new JLabel("Enter Surname:"));
-//		searchLabel.setFont(this.parent.font1);
-//		textPanel.add(searchField = new JTextField(20));
-//		searchField.setFont(this.parent.font1);
-//		searchField.setDocument(new JTextFieldLimit(20));
-//
-//		buttonPanel.add(search = new JButton("Search"));
-//		search.addActionListener(this);
-//		search.requestFocus();
-//		
-//		buttonPanel.add(cancel = new JButton("Cancel"));
-//		cancel.addActionListener(this);
-//		
-//		searchPanel.add(textPanel);
-//		searchPanel.add(buttonPanel);
-//
-//		return searchPanel;
-	}// end searchPane
+
+	}
 	
 	JPanel createTitlePanel() {
         JPanel panel = new JPanel();
