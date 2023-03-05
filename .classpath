@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/niall/.m2/repository/net/bytebuddy/byte-buddy/1.12.18/byte-buddy-1.12.18.jar" sourcepath="C:/Users/niall/.m2/repository/net/bytebuddy/byte-buddy/1.12.18/byte-buddy-1.12.18-sources.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -10,11 +15,7 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/Template2023/miglayout-4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/niall/Downloads/miglayout-4.0-swing (1).jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
