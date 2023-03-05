@@ -75,7 +75,7 @@ public class SearchByIdDialog extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// if option search, search for Employee
 		if (e.getSource() == search) {
-			// try get correct valus from text field
+			// try get correct values from text field
 			try {
 				Double.parseDouble(searchField.getText());
 				this.parent.searchByIdField.setText(searchField.getText());
