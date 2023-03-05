@@ -86,15 +86,11 @@ public abstract class SearchBySurnameDialog extends JDialog implements ActionLis
 
 	// action listener for save and cancel button
 	public void actionPerformed(ActionEvent e) {
-		// if option search, search for Employee
-		if(e.getSource() == search){
-			this.parent.searchBySurnameField.setText(searchField.getText());
-			// search Employee by surname
-			this.parent.searchEmployeeBySurname();
-			dispose();// dispose dialog
-		}// end if
-		// else dispose dialog
-		else if(e.getSource() == cancel)
-			dispose();// dispose dialog
+		if (e.getSource() == search) {
+            performSearch();
+            dispose();
+        } else if (e.getSource() == cancel) {
+            dispose();// dispose dialog
+        }
 	}// end actionPerformed
 }// end class SearchBySurnameDialog

@@ -21,7 +21,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 
-public class SearchByIdDialog extends JDialog implements ActionListener {
+public abstract class SearchByIdDialog extends JDialog implements ActionListener {
 	EmployeeDetails parent;
 	JButton search, cancel;
 	JTextField searchField;
@@ -41,6 +41,8 @@ public class SearchByIdDialog extends JDialog implements ActionListener {
 		setLocation(350, 250);
 		setVisible(true);
 	}// end SearchByIdDialog
+	
+	public abstract void searchEmployee();
 	
 	// initialize search container
 	public Container searchPane() {
@@ -70,27 +72,17 @@ public class SearchByIdDialog extends JDialog implements ActionListener {
 
 		return searchPanel;
 	}// end searchPane
+	
+	abstract String getDialogTitle();
+	abstract String getSearchLabel();
 
 	// action listener for save and cancel button
 	public void actionPerformed(ActionEvent e) {
 		// if option search, search for Employee
-		if (e.getSource() == search) {
-			// try get correct values from text field
-			try {
-				Double.parseDouble(searchField.getText());
-				this.parent.searchByIdField.setText(searchField.getText());
-				// search Employee by ID
-				this.parent.searchEmployeeById();
-				dispose();// dispose dialog
-			}// end try
-			catch (NumberFormatException num) {
-				// display message and set colour to text field if entry is wrong
-				searchField.setBackground(new Color(255, 150, 150));
-				JOptionPane.showMessageDialog(null, "Wrong ID format!");
-			}// end catch
-		}// end if
-		// else dispose dialog
-		else if (e.getSource() == cancel)
-			dispose();
+			 if (e.getSource() == search) {
+		            searchEmployee();
+		            dispose();
+		        } else if (e.getSource() == cancel) {
+		            dispose();
 	}// end actionPerformed
-}// end class searchByIdDialog
+}}// end class searchByIdDialog
