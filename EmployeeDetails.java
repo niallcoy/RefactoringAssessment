@@ -1048,6 +1048,40 @@ public class EmployeeDetails extends JFrame implements ActionListener, ItemListe
 				new SearchBySurnameDialog(EmployeeDetails.this);
 		}
 	}// end actionPerformed
+//	public interface Command {
+//	    void execute();
+//	}
+//	
+//	public class CloseAppCommand implements Command {
+//	    public void execute() {
+//	        if (checkInput() && !checkForChanges()) {
+//	            exitApp();
+//	        }
+//	    }
+//	}                                                           tried to implement the command pattern but kept getting errors and it wouldnt work for me
+//
+//	public class OpenCommand implements Command {
+//	    public void execute() {
+//	        if (checkInput() && !checkForChanges()) {
+//	            openFile();
+//	        }
+//	    }
+//	}
+//	
+//	Map<Object, Command> commandMap = new HashMap<>();
+//	commandMap.put(closeApp, new CloseAppCommand());
+//	commandMap.put(open, new OpenCommand());
+//	
+//	
+//	public void actionPerformed(ActionEvent e) {
+//	    Command command = commandMap.get(e.getSource());
+//	    if (command != null) {
+//	        command.execute();
+//	    }
+//	}
+
+
+
 
 	// content pane for main dialog
 	private void createContentPane() {
